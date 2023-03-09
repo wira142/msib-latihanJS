@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan javascript</title>
+    <style>
+      .segitiga {
+        height: 0px;
+        width: 0px;
+        float: left;
+        border-bottom: solid 150px blue;
+        border-left: solid 80px transparent;
+        border-right: solid 80px transparent;
+      }
+      .pp {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        float: left;
+        margin-right: 20px;
+      }
+      .jg {
+        margin: 25px;
+        float: left;
+        background: blue;
+        width: 200px;
+        height: 100px;
+        -ms-transform: skew(20deg); /* Support untuk IE 9 */
+        -webkit-transform: skew(20deg); /* support untuk Safari */
+        transform: skew(20deg); /* default syntax */
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      let sisi = 12; //segitiga
+      let pp_panjang = 8; //persegi panjang
+      let pp_lebar = 4; //persegi panjang
+      let jg_panjang = 10; //jajar genjang
+      let jg_lebar = 6; //jajar genjang
+      const k_pp = 2 * (pp_panjang + pp_lebar); //keliling persegi panjang
+      const k_segitiga = 3 * sisi; //keliling segitiga
+      const k_jg = 2 * (jg_panjang + jg_lebar); //keliling jajar genjang
+
+      document.write("<h1>Contoh Perhitungan Keliling Bangun Datar:</h1>");
+      document.write("<hr />");
+      //persegi panjang
+      document.write("<h3>Bangun Datar Persegi Panjang</h3>");
+      document.write('<div class="pp"></div>');
+      document.write("<h5>Keliling Persegi Panjang = 2 x (P + L)</h5>");
+      document.write(
+        "<h5>K = 2 x (" + pp_panjang + " + " + pp_lebar + ")</h5>"
+      );
+      document.write("<h5>K = " + k_pp + " </h5>");
+
+      //jajar genjang
+      document.write("<h3>Bangun Datar Jajar Genjang</h3>");
+      document.write('<div class="jg"></div>');
+      document.write("<h5>Keliling Jajar Genjang = 2 x (P + L)</h5>");
+      document.write(
+        "<h5>K = 2 x (" + jg_panjang + " + " + jg_lebar + ")</h5>"
+      );
+      document.write("<h5>K = " + k_jg + " </h5>");
+
+      //segitiga
+      document.write("<br>");
+      document.write("<h3>Bangun Datar Segitiga</h3>");
+      document.write('<div class="segitiga"></div>');
+      document.write("<h5>Keliling Datar Segitiga = sisi + sisi + sisi</h5>");
+      document.write(
+        "<h5>Keliling = " + sisi + " + " + sisi + " + " + sisi + "</h5>"
+      );
+      document.write("<h5>K = " + k_segitiga + " </h5>");
+
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+    </script>
+  </body>
+</html>
